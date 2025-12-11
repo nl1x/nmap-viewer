@@ -1,0 +1,11 @@
+.idea
+
+.env
+tsconfig.tsbuildinfo
+pnpm-lock.yaml
+
+dist
+node_modules
+
+back-end/uploads/*
+!back-end/uploads/.gitkeep
