@@ -1,0 +1,28 @@
+services:
+  database:
+    image: postgres:17-alpine
+    restart: always
+    volumes:
+      - db_volume:/var/lib/postgres
+    env_file:
+      - .env
+    networks:
+      -  db_network
+    ports:
+      - "5432:5432"
+
+  adminer:
+     image: adminer
+     restart: always
+     networks:
+       - db_network
+     ports:
+      - "8080:8080"
+
+networks:
+  db_network:
+  redis_network:
+
+volumes:
+  db_volume:
+  redis_volume:
