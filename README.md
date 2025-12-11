@@ -21,10 +21,10 @@ Le candidat a toute liberté sur les choix des technologies.
 
 | Domaine        | Technologie |
 |----------------|-------------|
-| Back-end       | NestTS      |
+| Back-end       | ExpressTS   |
 | Front-end      | ViteTS      |
 | Base de donnée | Postgresql  |
-| ORM            | Prisma      |
+| ORM            | Sequelize   |
 
 ## Schéma de la base de donnée
 <img src="assets/db-schema.png" width="450" alt="">
