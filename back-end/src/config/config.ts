@@ -10,6 +10,7 @@ export interface Config {
     username: string;
     password: string;
   }
+  webUrl: string;
   port: number;
   environnement: string;
   isProduction: () => boolean;
@@ -24,6 +25,7 @@ const config: Config = {
     username: process.env.DB_USER || 'user',
     password: process.env.DB_PASSWORD || 'password',
   },
+  webUrl: process.env.WEB_URL || 'http://localhost:5173',
   port: Number(process.env.APP_PORT) || 3000,
   environnement: process.env.APP_ENVIRONNEMENT || 'development',
   isProduction() {

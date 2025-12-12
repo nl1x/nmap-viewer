@@ -12,6 +12,7 @@
   "author": "nL1x",
   "packageManager": "pnpm@10.17.1",
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/node": "^24.10.2",
     "dotenv": "^17.2.3",
@@ -25,6 +26,7 @@
   },
   "dependencies": {
     "@types/multer": "^2.0.0",
+    "cors": "^2.8.5",
     "express": "^5.2.1",
     "multer": "^2.0.2",
     "pg": "^8.16.3",
@@ -34,6 +36,7 @@
   "imports": {
     "#config/*": "./dist/config/*.js",
     "#exceptions/*": "./dist/exceptions/*.js",
-    "#app/*": "./dist/app/*.js"
+    "#app/*": "./dist/app/*.js",
+    "#parser/*": "./dist/parser/*.js"
   }
 }

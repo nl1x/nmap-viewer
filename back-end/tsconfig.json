@@ -22,12 +22,8 @@
       "#app/*": ["./app/*"],
       "#exceptions/*": ["./exceptions/*"],
       "#config/*": ["./config/*"],
+      "#parser/*": ["./parser/*"]
     }
-//    "types": [
-//      "node",
-//      "express",
-//      "multer"
-//    ]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"],
