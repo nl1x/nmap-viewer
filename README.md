@@ -26,6 +26,9 @@ Le candidat a toute liberté sur les choix des technologies.
 | Base de donnée | Postgresql  |
 | ORM            | Sequelize   |
 
+### Schéma de la base de donnée
+<img src="assets/db-schema.png" width="450" alt="">
+
 ## Rendu
 
 ### Prérequis
@@ -58,9 +61,6 @@ docker compose up --build
 > [!NOTE]
 > Les erreurs liées à la base de donnée au démarrage du back-end sont normales. Elles disparaîtront une fois
 > que la base de donnée sera démarrée et prête à l'utilisation.
-
-### Schéma de la base de donnée
-<img src="assets/db-schema.png" width="450" alt="">
 
 ----
 
