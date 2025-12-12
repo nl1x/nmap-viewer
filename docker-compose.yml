@@ -17,12 +17,34 @@ services:
      networks:
        - db_network
      ports:
-      - "8080:8080"
+       - "8081:8080"
+
+  front-end:
+    build: front-end
+    restart: always
+    env_file:
+      - front-end/.env
+    networks:
+      - app_network
+    ports:
+      - "8080:80"
+
+  back-end:
+    build: back-end
+    depends_on:
+      - database
+    restart: on-failure
+    env_file:
+      - back-end/.env
+    networks:
+      - app_network
+      - db_network
+    ports:
+      - "3000:3000"
 
 networks:
+  app_network:
   db_network:
-  redis_network:
 
 volumes:
   db_volume:
-  redis_volume:
