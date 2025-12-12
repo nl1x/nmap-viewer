@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express';
-import { BadRequestException } from "#exceptions/exceptions";
-import {NmapParser} from "../utils/nmap-parser.js";
+import { BadRequestException } from '#exceptions/exceptions';
+import { NmapParser } from '#parser/nmap-parser';
 import AppService from '#app/app.service';
 
 /**
@@ -8,6 +8,11 @@ import AppService from '#app/app.service';
  * @note Endpoint: /
  */
 export default class AppController {
+
+  static async getHosts(req: Request, res: Response) {
+    const hosts = await AppService.getHosts();
+    res.json(hosts);
+  }
 
   /**
    * @brief POST /upload : Upload multiple files.

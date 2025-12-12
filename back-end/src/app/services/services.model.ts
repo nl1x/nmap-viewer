@@ -5,6 +5,7 @@ export interface ServiceAttributes {
   host_ipv4: string;
   name: string;
   port: number;
+  protocol: string;
   state: 'open' | 'closed' | 'filtered';
   createdAt?: Date | undefined;
   updatedAt?: Date | undefined;
@@ -17,6 +18,7 @@ export default class ServicesModel extends Model<ServiceAttributes, ServiceCreat
   public host_ipv4!: string;
   public name!: string;
   public port!: number;
+  public protocol!: string;
   public state!: 'open' | 'closed' | 'filtered';
   public readonly createdAt!: Date | undefined;
   public readonly updatedAt!: Date | undefined;
@@ -28,6 +30,7 @@ export default class ServicesModel extends Model<ServiceAttributes, ServiceCreat
       host_ipv4: values.host_ipv4,
       name: values.name,
       port: values.port,
+      protocol: values.protocol,
       state: values.state,
       createdAt: values.createdAt,
       updatedAt: values.updatedAt
@@ -53,6 +56,10 @@ export async function initServicesModel(database: Sequelize) {
       },
       port: {
         type: DataTypes.SMALLINT,
+        allowNull: false,
+      },
+      protocol: {
+        type: DataTypes.STRING(10),
         allowNull: false,
       },
       state: {
