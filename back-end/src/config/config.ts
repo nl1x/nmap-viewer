@@ -11,6 +11,7 @@ export interface Config {
     password: string;
   }
   webUrl: string;
+  uploadDir: string;
   port: number;
   environnement: string;
   isProduction: () => boolean;
@@ -26,6 +27,7 @@ const config: Config = {
     password: process.env.DB_PASSWORD || 'password',
   },
   webUrl: process.env.WEB_URL || 'http://localhost:5173',
+  uploadDir: process.env.UPLOAD_DIR || '../',
   port: Number(process.env.APP_PORT) || 3000,
   environnement: process.env.APP_ENVIRONNEMENT || 'development',
   isProduction() {
