@@ -19,12 +19,11 @@ Le candidat a toute liberté sur les choix des technologies.
 
 ## Choix des technologies
 
-| Domaine        | Technologie |
-|----------------|-------------|
-| Back-end       | ExpressTS   |
-| Front-end      | ViteTS      |
-| Base de donnée | Postgresql  |
-| ORM            | Sequelize   |
+| Domaine        | Technologie           |
+|----------------|-----------------------|
+| Back-end       | ExpressTS + Sequelize |
+| Front-end      | ViteTS + HeroUI       |
+| Base de donnée | Postgresql            |
 
 ### Schéma de la base de donnée
 <img src="assets/db-schema.png" width="450" alt="">
