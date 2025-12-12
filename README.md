@@ -26,7 +26,40 @@ Le candidat a toute liberté sur les choix des technologies.
 | Base de donnée | Postgresql  |
 | ORM            | Sequelize   |
 
-## Schéma de la base de donnée
+## Rendu
+
+### Prérequis
+
+- docker
+
+### Installation
+
+Avant de lancer l'application, commencez par copier le contenu des fichiers .env.example dans un fichier .env,
+dans les dossiers correspondant.
+
+```bash
+cp .env.example .env
+cp front-end/.env.example front-end/.env
+cp back-end/.env.example back-end/.env
+```
+
+Une fois cela fait, éditez les fichiers comme bon vous semble. 
+
+> [!NOTE]
+> Pensez bien à modifier les identifiants de la base de donnée à la fois dans le fichier `.env` et dans le fichier `back-end/.env`.
+
+### Démarrage
+
+Pour lancer l'application, exécutez le docker-compose à la racine du dépôt :
+```bash
+docker compose up --build
+```
+
+> [!NOTE]
+> Les erreurs liées à la base de donnée au démarrage du back-end sont normales. Elles disparaîtront une fois
+> que la base de donnée sera démarrée et prête à l'utilisation.
+
+### Schéma de la base de donnée
 <img src="assets/db-schema.png" width="450" alt="">
 
 ----
