@@ -85,11 +85,11 @@ const MultipleFilesInput = ({
           )}
         </Button>
         <Button
-          className="w-full col-span-1 h-12 rounded-tl-none rounded-bl-none justify-center-safe"
+          className="w-full col-span-1 h-12 rounded-tl-none rounded-bl-none justify-center-safe focus:ring-0"
           color="default"
           endContent={<PaperAirplaneIcon className="w-5 h-5 text-gray-500" />}
           isLoading={loading}
-          variant="flat"
+          variant="solid"
           onPress={() => {
             setLoading(true);
             validate(files).then(() => {
